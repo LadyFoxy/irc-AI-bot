@@ -4,7 +4,7 @@ from urllib2 import urlopen, Request
 
 NICKNAME='foo'
 CHANNEL='#offtopicsec'
-network = 'adams.freenode.net'
+network = 'karma.freenode.net'
 port = 6667
 
 lame_excuses =["My dog ate my brain :(","Zug zug!","Err, I didn't quite get that :(", "What?", "What? Sorry I was not paying attention. Hmm, I don't know","*dances* I don't know what you mean, but I love the Internet!"," *cry* I think my brain died :("]
@@ -44,7 +44,7 @@ def botspeak(speaker, what_is_said):
         botreply=botreply.replace("Judge", speaker[0:speaker_whole.find('!')])
         print "fixed reply was:" + botreply
     except:
-        print "something whent wrong, lets think up a lame excuse"
+        print "something went wrong, let's think up a lame excuse"
         botreply = " "+ lame_excuses[random.randint(0,len(lame_excuses)-1)]
     return botreply
 
